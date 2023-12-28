@@ -22,13 +22,19 @@ public class Store extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 30)
+    @Column(nullable = false, length = 100)
     private String name;
 
-    @Column(nullable = false, length = 100)
     private String address;
 
     private Float score;
+
+    public void setStore(Region region){
+        if(this.region != null)
+            region.getStoreList().remove(this);
+        this.region = region;;
+        region.getStoreList().add(this);
+    }
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id")

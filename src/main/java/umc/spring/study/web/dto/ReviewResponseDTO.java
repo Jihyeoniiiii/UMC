@@ -1,2 +1,19 @@
-package umc.spring.study.web.dto;public class ReviewResponseDTO {
+package umc.spring.study.web.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+
+public class ReviewResponseDTO {
+    @Builder
+    @Getter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public static class ReviewResultDTO{
+        Long reviewId;
+        LocalDate createdAt;
+    }
 }

@@ -23,7 +23,6 @@ public class Region extends BaseEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 30)
     private String name;
 
     @OneToMany(mappedBy = "region", cascade = CascadeType.ALL)

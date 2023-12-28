@@ -1,2 +1,4 @@
-package umc.spring.study.service.MemberService;public interface MemberQueryService {
+package umc.spring.study.service.MemberService;
+
+public interface MemberQueryService {
 }

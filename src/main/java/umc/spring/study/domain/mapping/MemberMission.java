@@ -34,4 +34,11 @@ public class MemberMission extends BaseEntity {
     @JoinColumn(name = "mission_id")
     private Mission mission;
 
+    public void setMemberId(Member member) {
+        this.member = member;
+    }
+
+    public void setMissionId(Mission mission) {
+        this.mission = mission;
+    }
 }
